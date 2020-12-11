@@ -29,5 +29,12 @@ function createTodo(todoLabel) {
 
 document.formAddTodo.onsubmit = function(e) {
   e.preventDefault();
-  createTodo(document.formAddTodo.todoTxt.value);
+  const inputUser = document.formAddTodo.todoTxt.value;
+  if (inputUser.length < 3) {
+    alert("Votre saisie est icomplète!");
+  } 
+  else { 
+    createTodo(inputUser);
+    document.formAddTodo.reset();
+  }
 }

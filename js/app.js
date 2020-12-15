@@ -10,7 +10,7 @@ function createTodo(todoLabel) {
   // CONFIGURATION
   divTodo.className = 'todo';
   btTodo.onclick = function() {
-      console.log("Bouton cliqué", todoLabel);
+    divTodo.remove();
   };
 
   // IMBRICATION
